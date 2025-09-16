@@ -1,0 +1,2 @@
+Candidate Name,Interview Duration,Number of Times Focus Lost,Final Integrity Score,Suspicious Events,Video Link
+heya,0 minutes,2,80,User looking away from screen (>5 sec) at 2025-09-16T14:41:39.075Z; User looking away from screen (>5 sec) at 2025-09-16T14:41:39.135Z; Cell phone detected (59% confidence) at 2025-09-16T14:41:48.811Z,http://localhost:5000/videos/68c9771a3c8145993ca86e67
