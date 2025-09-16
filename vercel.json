@@ -7,21 +7,12 @@
     }
   ],
   "routes": [
-    {
-      "src": "/",
-      "dest": "/api/index.js"
-    },
-    {
-      "src": "/events/(.*)",
-      "dest": "/api/events.js"
-    },
-    {
-      "src": "/upload-video/(.*)",
-      "dest": "/api/upload-video.js"
-    },
-    {
-      "src": "/videos/(.*)",
-      "dest": "/api/videos.js"
-    }
+    { "src": "/", "dest": "/api/index.js" },
+    { "src": "/events/(.*)", "dest": "/api/events.js" },
+    { "src": "/api/events/(.*)", "dest": "/api/events.js" },
+    { "src": "/upload-video/(.*)", "dest": "/api/upload-video.js" },
+    { "src": "/api/upload-video/(.*)", "dest": "/api/upload-video.js" },
+    { "src": "/videos/(.*)", "dest": "/api/videos.js" },
+    { "src": "/api/videos/(.*)", "dest": "/api/videos.js" }
   ]
 }
