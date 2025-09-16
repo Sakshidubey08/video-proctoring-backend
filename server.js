@@ -184,11 +184,24 @@ try {
   console.error('Error checking Session.js:', err);
 }
 
+try {
+  const eventRoutesPath = path.join(__dirname, 'src', 'routes', 'events.js');
+  if (!fs.existsSync(eventRoutesPath)) {
+    console.error(`events.js not found at ${eventRoutesPath}`);
+  } else {
+    console.log(`events.js found at ${eventRoutesPath}`);
+  }
+} catch (err) {
+  console.error('Error checking events.js:', err);
+}
+
 const Session = require('./src/models/Session');
 const eventRoutes = require('./src/routes/events');
 
+console.log('eventRoutes:', eventRoutes); // Debug to check router
+
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000' })); // Allow frontend
+app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(bodyParser.json());
 
 const uploadDir = path.join(__dirname, 'uploads');

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/events/(.*)", "dest": "/api/events.js" },
+    { "src": "/upload-video/(.*)", "dest": "/api/upload-video.js" },
+    { "src": "/videos/(.*)", "dest": "/api/videos.js" }
+  ],
+  "ignore": ["uploads", "reports", "generateReport.js", "src/server.js"]
+}
